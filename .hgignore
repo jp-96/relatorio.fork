@@ -1,0 +1,12 @@
+syntax:glob
+*.pyc
+.*.swp
+.coverage
+relatorio.egg-info/
+examples/output_*
+examples/hbar.svg
+examples/line.png
+examples/pie.png
+examples/vbar.svg
+dist/
+build/
