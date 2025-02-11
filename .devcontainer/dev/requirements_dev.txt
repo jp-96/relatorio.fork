@@ -4,6 +4,6 @@ pytest-cov
 Genshi
 lxml
 pycairo
-pycha
+pycha @ git+https://github.com/BonaFideIT/pycha3.git
 pyyaml==5.3.1
 python-magic
