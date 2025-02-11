@@ -293,21 +293,17 @@ class Template(MarkupTemplate):
 
         while self.inner_docs:
             doc = self.inner_docs.pop()
-            c_path, s_path, m_path = (
-                doc + '/content.xml', doc + '/styles.xml', doc + '/meta.xml')
+            c_path, s_path = (
+                doc + '/content.xml', doc + '/styles.xml')
             content = zf.read(c_path)
             styles = zf.read(s_path)
-            meta = zf.read(m_path)
 
             c_parsed = template._parse(self.insert_directives(content),
                                        encoding)
             s_parsed = template._parse(self.insert_directives(styles),
                                        encoding)
-            m_parsed = template._parse(self.insert_directives(meta),
-                                       encoding)
             content_files.append((c_path, c_parsed))
             styles_files.append((s_path, s_parsed))
-            meta_files.append((m_path, m_parsed))
         zf.close()
 
         parsed = []
