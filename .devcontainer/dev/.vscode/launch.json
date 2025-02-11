@@ -1,0 +1,41 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information visit:
+    // https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "demo-chart",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/code/examples",
+            "program": "demo_chart.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "demo-context",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/code/examples",
+            "program": "demo_context.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "demo-odf",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/code/examples",
+            "program": "demo_odf.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "demo-repository",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/code/examples",
+            "program": "demo_repository.py",
+            "console": "integratedTerminal"
+        },
+    ]
+}

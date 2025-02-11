@@ -1,0 +1,9 @@
+pytest
+pytest-cov
+
+Genshi
+lxml
+pycairo
+pycha
+pyyaml==5.3.1
+python-magic

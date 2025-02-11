@@ -1,0 +1,77 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "setup utils",
+            "type": "shell",
+            "command": "sudo",
+            "args": [
+                "pip3",
+                "install",
+                "--upgrade",
+                "build",
+                "pip",
+                "--root-user-action=ignore" // Suppress WARNING
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "build package",
+            "type": "shell",
+            "command": "sudo",
+            "args": [
+                "python",
+                "-m",
+                "build"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/code" // Set the working directory to 'code' folder
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "uninstall package",
+            "type": "shell",
+            "command": "sudo",
+            "args": [
+                "pip3",
+                "uninstall",
+                "-y",
+                "relatorio",                // target package name
+                "--root-user-action=ignore" // Suppress WARNING
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "install package",
+            "type": "shell",
+            "command": "sudo",
+            "args": [
+                "pip3",
+                "install",
+                "--upgrade",
+                ".",
+                "--root-user-action=ignore" // Suppress WARNING
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/code" // Set the working directory to 'code' folder
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "rebuild",
+            "dependsOn": [
+                "setup utils",
+                "build package"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
