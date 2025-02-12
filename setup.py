@@ -32,7 +32,7 @@ setup(
         },
     keywords='templating OpenDocument PDF',
     license="GPL License",
-    version=get_version(),
+    version=get_version() + "+jp96",
     packages=find_packages(exclude=['examples']),
     package_data={
         'relatorio.tests': [
