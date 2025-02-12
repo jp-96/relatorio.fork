@@ -46,7 +46,7 @@ class PDFSerializer:
         subprocess.check_call([TEXEXEC, '--purge', 'report.tex'],
                               cwd=working_dir)
 
-        with open(pdf_file, 'r') as fp:
+        with open(pdf_file, 'rb') as fp:
             result.write(fp.read())
 
         shutil.rmtree(working_dir, ignore_errors=True)

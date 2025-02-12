@@ -32,19 +32,6 @@
             "problemMatcher": []
         },
         {
-            "label": "uninstall package",
-            "type": "shell",
-            "command": "sudo",
-            "args": [
-                "pip3",
-                "uninstall",
-                "-y",
-                "relatorio",                // target package name
-                "--root-user-action=ignore" // Suppress WARNING
-            ],
-            "problemMatcher": []
-        },
-        {
             "label": "install package",
             "type": "shell",
             "command": "sudo",
@@ -64,7 +51,8 @@
             "label": "rebuild",
             "dependsOn": [
                 "setup utils",
-                "build package"
+                "build package",
+                "install package"
             ],
             "dependsOrder": "sequence",
             "problemMatcher": [],
