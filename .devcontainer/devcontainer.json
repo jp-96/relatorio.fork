@@ -8,9 +8,9 @@
 		"docker-compose.yml"
 	],
 	// Adding the forward port for VS Code IDE.
-	"forwardPorts": [
-		80
-	],
+	// "forwardPorts": [
+	// 	80
+	// ],
 	// The 'service' property is the name of the service for the container that VS Code should
 	// use. Update this value and .devcontainer/docker-compose.yml to the real service name.
 	"service": "dev",
