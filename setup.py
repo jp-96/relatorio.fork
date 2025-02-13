@@ -45,9 +45,15 @@ setup(
         "lxml >= 2.0"
     ],
     extras_require={
-        'chart': ['pycha >= 0.4.0', 'pyyaml'],  # pycairo
-        'fodt': ['python-magic'],
-        },
+        'chart': [
+            'pycha @ git+https://github.com/BonaFideIT/pycha3.git',
+            'pyyaml == 5.3.1',
+            'pycairo'
+        ],
+        'fodt': [
+            'python-magic'
+        ],
+    },
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
